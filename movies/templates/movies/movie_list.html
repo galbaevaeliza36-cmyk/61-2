@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список фильмов</title>
+</head>
+<body>
+
+<h1>Фильмы</h1>
+
+{% for movie in movies %}
+    <div style="margin-bottom: 20px;">
+        <p><strong>Title:</strong> {{ movie.title }}</p>
+        <p><strong>Description:</strong> {{ movie.description }}</p>
+        <p><strong>Year:</strong> {{ movie.year }}</p>
+        <p><strong>Rating:</strong> {{ movie.rating }}</p>
+        <hr>
+    </div>
+{% empty %}
+    <p>Фильмов пока нет</p>
+{% endfor %}
+
+</body>
+</html>
