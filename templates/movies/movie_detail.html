@@ -1,0 +1,10 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ movie.title }}</h1>
+<p>Год выхода: {{ movie.release_year }}</p>
+<p>Описание: {{ movie.description }}</p>
+<p>Категория: <a href="{% url 'category_detail' movie.category.slug %}">{{ movie.category.name }}</a></p>
+{% endblock %}
